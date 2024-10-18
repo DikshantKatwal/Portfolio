@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    font-family: Oswald;
+    line-height: 1.5;
+    font-weight: 300;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 1);
+    background-color: #000;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1{
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 800;
+    
+}
+
+h2{
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 600;
+    
+}
+h3{
+    font-size: 25px;
+}
+p{
+    font-size: 20px;
+}
+
+.home-container{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.nav-container{
+    position: absolute;
+    height: 100%;
+    width: 65px;
+    padding: 5px;
+    z-index: 100;
+    transition: left 0.5s ease;
+}
+
+.nav-top-container{
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;;
+    overflow: hidden;
+}
+
+.logo{
+    height: 15%;
+    width: 100%;
+
+}
+.logo-img{
+    height: 100%;
+    object-fit: contain;
+}
+.nav-content-box{
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.nav-content{
+    transform: rotate(-90deg);
+    position: relative;
+    font-size: large;
+    font-weight: 400;
+}
+.nav-content::after{
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust position as needed */
+    left: 0;
+    height: 1px;
+    width: 110%;
+    background-color: currentColor;
+    transform: scaleX(0.9);
+    transform-origin: left;
+    transition: transform 200ms ease-in-out;
+}
+.nav-content:hover::after{
+    transform: scaleX(0.7);
+}
+.nav-bottom-container{
+    height: 20%;
+}
+
+
+.nav-icon{
+    display: none;
+    position: absolute;
+    padding-top: 5px;
+    height:35px;
+    width: 100%;
+}
+.main-container{
+    padding-left: 70px;
+    width: 100%;
+}
+
+@media screen and (max-width: 470px) {
+    .nav-container{
+        left: -100%; /* Hidden off-screen */
+        width: 50px;
+        background-color: #000;
+    }
+    .logo{
+        display: none;
+    }
+    h2{
+        font-size: 35px;
+        font-weight: 400;
+        
+    }
+    h3{
+        font-size: 20px;
+    }
+    .nav-icon{
+        display: flex;
+        align-items: center;
+        height: 50px;
+        border-bottom: 1px solid white;
+    }
+    .logo-img{
+        height: 40px;
+    }
+    .nav-content-box{
+        height: 100%;
+        
+    }
+    .logo-container-icon{
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .navigation-icon{
+        z-index: 10;
+        cursor: pointer;
+    }
+    .nav-container.show {
+        display: block;
+        left: 0%
+      }
+    .main-container{
+        padding-left: 0px;
+        padding-top: 50px;
+    }
+    
+}
+

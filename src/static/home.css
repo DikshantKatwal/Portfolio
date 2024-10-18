@@ -1,0 +1,62 @@
+.main-container-1{
+   height: 100%;
+   overflow: hidden;
+}
+.name-container{
+    height: 30%;
+    display: flex;
+    align-items: end;
+    width: 100%;
+}
+
+
+.name-container-1{
+    width: 100%;
+    min-width: 250px;
+    text-align: center;
+    position: relative;
+}
+
+
+.name-container-1::after{
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust position as needed */
+    left: 10%;
+    height: 3px;
+    width: 50%;
+    background-color: white;
+    transform: scaleX(0.9);
+    transform-origin: left;
+    transition: transform 200ms ease-in-out;
+}
+.buttom-container{
+    padding-top: 2%;
+    height: 100%;
+    padding-left: 5%;
+    text-align: center;
+}
+@media screen and (max-width: 470px) {
+    .name-container-1{
+        padding-left: 10%;
+    }
+    .name{
+        font-size: 30px;
+    }
+    .name-container-1::after{
+        left: 17%;
+        width: 60%;
+    }
+    .buttom-container{
+        font-size: 10px;
+    }
+ 
+    /* .name-container-1{
+        width: 60%;
+    }
+    .name-container{
+        height: 10%;
+    } */
+    
+
+}

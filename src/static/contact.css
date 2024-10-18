@@ -1,0 +1,33 @@
+.contact-container{
+    background-color: aquamarine;
+    margin-top: 5%;
+    text-align: center;
+}
+.contact-text-container{
+    width: 100%;
+    min-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.contact-text-inner{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    min-width: 260px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+@media screen and (max-width: 470px) {
+    .contact-text-inner{
+        width: 100%;
+        min-width: 280px;
+        padding-left: 5%;
+        padding-right: 5%;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+}

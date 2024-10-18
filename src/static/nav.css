@@ -1,0 +1,20 @@
+
+
+.step-container {
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.step-enter {
+    /* Initial position outside the screen on the right */
+    opacity: 1;
+    transition: opacity 0.5s ease, opacity 0.5s ease;
+}
+
+.step-exit {
+    /* width:0; */
+    opacity:0;
+    transition: opacity 0.5s ease, opacity 0.5s ease;
+}
